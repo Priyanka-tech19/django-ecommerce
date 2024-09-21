@@ -8,10 +8,10 @@ __pycache__/
 *.py[cod]
 db.sqlite3
 media/
-
+staticfiles/
 .env
 
 # IDEs
-
+.vscode/
 .idea/
 *.swp
