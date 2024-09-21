@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "ecom",
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.analysis.typeCheckingMode": "basic"
+	}
+}
