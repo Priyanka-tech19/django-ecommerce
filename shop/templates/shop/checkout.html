@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script src="{% static 'shop/checkout.js' %}"></script>
+    <script src="{% static 'shop/cities.js' %}"></script>
+   
+    
+   
+
+
+ 
+    <title>Document</title>
+
+</head>
+<body>
+  <div class="container">
+      <div class="col-md-12">
+          <div class="row">
+              <ul class="list-group" id="item_list"></ul>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12">
+              <form id="order-form" method="POST">
+                  {% csrf_token %}
+                  <input type="hidden" id="items" name="items">
+                  <div class="form-row">
+                      <div class="form-group col-md-6">
+                          <label for="name">Name</label>
+                          <input id="name" name="name" type="text" class="form-control" placeholder="John">
+                          <div id="name-error" class="text-danger">
+                            
+                          </div>
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="email">Email</label>
+                          <input id="email" name="email" type="text" class="form-control" placeholder="john@john.com">
+                          <div id="email-error" class="text-danger"></div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="address">Address</label>
+                      <input id="address" name="address" type="text" class="form-control" placeholder="1234 Main St">
+                      <div id="address-error" class="text-danger"></div> <!-- Error message will be displayed here -->
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col-md-4">
+                          <label for="sts">State</label>
+                          <select onchange="print_city('city', this.selectedIndex);" id="state" name="state" class="form-control" required>
+                              <option value="">Select State</option>
+                          </select>
+                          <script language="javascript">print_state("state");</script>
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="city">City</label>
+                          <select id="city" name="city" class="form-control" required>
+                              <option value="">Select City</option>
+                          </select>
+                      </div>
+                      <div class="form-group col-md-2">
+                          <label for="zipcode">Zip</label>
+                          <input id="zipcode" name="zipcode" type="text" class="form-control">
+                          <div id="zipcode-error" class="text-danger"></div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="total">Amount to be paid </label>
+                      <input readonly="" type="text" class="form-control " id="total" name="total">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Place Order</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</body>
+
+</html>
