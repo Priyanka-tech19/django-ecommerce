@@ -1,4 +1,5 @@
 🛒 Django E-Commerce Web Application
+
 A beginner-friendly yet feature-rich E-Commerce platform developed using Django, aimed at replicating the real-world online shopping experience. This project demonstrates core e-commerce functionality—from product listing to cart management and checkout. 🚀
 
 ✨ Key Highlights
