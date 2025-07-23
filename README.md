@@ -3,6 +3,7 @@
 A beginner-friendly yet feature-rich E-Commerce platform developed using Django, aimed at replicating the real-world online shopping experience. This project demonstrates core e-commerce functionality—from product listing to cart management and checkout. 🚀
 
 ✨ Key Highlights
+
 🛍️ Product Listings – Responsive grid with individual product detail pages
 
 🔍 Search Functionality – Keyword-based filtering for better product discovery
@@ -14,6 +15,7 @@ A beginner-friendly yet feature-rich E-Commerce platform developed using Django,
 🔗 Clean Routing – SEO-friendly and structured URLs for easy navigation
 
 📂 Features
+
 ✅ Dynamic and responsive product display with images and descriptions
 
 ✅ Add-to-cart and remove-from-cart functionality
@@ -25,6 +27,7 @@ A beginner-friendly yet feature-rich E-Commerce platform developed using Django,
 ✅ Real-time product filtering using a simple search query
 
 🧰 Tech Stack
+
 Backend: Python, Django
 
 Frontend: HTML, CSS, Bootstrap
